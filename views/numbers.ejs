@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <link href="/assets/style.css" type="text/css"  rel="stylesheet">
+        <script></script>
+    </head>
+    <body>
+        <%if(number % 2 == 0){ %> <!--Determina si es par-->
+            <h2>El número <%= number %> es par</h2>
+            <% for(let i = 1; i <= number*2; i++) { %> <!--Ciclo para determinar hasta dónde detenerse segun el elemento enviado-->
+
+                <li><%= i %></li> <!--Imprime los números en el html-->
+
+            <% } %>
+            <% } else { %> <!--Determina si no es par-->
+                <h2>El número <%= number %> es impar</h2>
+            <% for(let i = 1; i <= number; i++) { %>
+
+                <li><%= i %></li>
+            
+            <% } %>
+        <% } %>
+    </body>
+</html>
